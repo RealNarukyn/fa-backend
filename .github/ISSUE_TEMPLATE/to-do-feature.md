@@ -2,7 +2,7 @@
 name: To Do Feature
 about: Task that needs to be implemented
 title: "+[ To Do ]: "
-labels: ''
+labels: task
 assignees: RealNarukyn
 
 ---
