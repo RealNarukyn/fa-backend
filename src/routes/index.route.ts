@@ -1,13 +1,17 @@
-import express, {Request, Response} from 'express';
+import express from 'express';
+
+import {IndexController} from '../controllers/index.controller';
+import RecipeRouter from './recipe.route';
 import RateRouter from './rate.route';
 
 // eslint-disable-next-line new-cap
 const router = express.Router();
 
-router.get('/', (req: Request, res: Response) => {
-  res.send('Index Routing');
-});
+// Index Routes
+router.get('/', IndexController.index);
 
-router.use('/rate', RateRouter);
+// The Other Routes
+router.use('/recipes', RecipeRouter);
+router.use('/rates', RateRouter);
 
 export default router;
